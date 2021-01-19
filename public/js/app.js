@@ -1,4 +1,4 @@
-console.log('client side javascript loaded')
+
 fetch('http://localhost:3000/weather?address=Pune').then((response)=>{
     response.json().then((data)=>{
         if(data.error){
