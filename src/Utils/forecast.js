@@ -9,7 +9,7 @@ const forecast = (longitude,latitude,callback) => {
             callback('did not find any data for the given input, please try with correct data', undefined)
         }else{
             callback(undefined,{
-                data : body.location.name +' weather: It is currently ' + body.current.temperature + ' degrees out there. It feels like ' + body.current.feelslike + ' degree'
+                data : body.location.name +' weather: '+ body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out there.'
             })
         }
     })
